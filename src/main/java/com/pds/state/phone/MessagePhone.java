@@ -6,7 +6,7 @@ import lombok.ToString;
 @AllArgsConstructor
 @ToString
 public class MessagePhone {
-    private String message;
-    private Integer quantityCalls;
-    private Integer activeCall;
+    private final String message;
+    private final Integer quantityCalls;
+    private final Integer activeCall;
 }

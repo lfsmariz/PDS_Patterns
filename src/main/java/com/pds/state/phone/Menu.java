@@ -4,11 +4,9 @@ import java.util.Scanner;
 
 public class Menu {
 
-    private ContextPhone contextPhone;
-
     public Menu(){
 
-        contextPhone = new ContextPhone();
+        ContextPhone ctxt = new ContextPhone();
 
         System.out.println("Realize uma das ações abaixo\n\n");
         Scanner sc = new Scanner(System.in);
@@ -18,22 +16,22 @@ public class Menu {
             opt = sc.nextInt();
             switch (opt){
                 case 1:
-                    System.out.println(contextPhone.getState().cancelCall());
+                    System.out.println(ctxt.getState().cancelCall());
                     break;
                 case 2:
-                    System.out.println(contextPhone.getState().acceptCall());
+                    System.out.println(ctxt.getState().acceptCall());
                     break;
                 case 3:
-                    System.out.println(contextPhone.getState().createCall());
+                    System.out.println(ctxt.getState().createCall());
                     break;
                 case 4:
-                    System.out.println(contextPhone.getState().changeCall());
+                    System.out.println(ctxt.getState().changeCall());
                     break;
                 case 5:
-                    System.out.println(contextPhone.getState().waitingCall());
+                    System.out.println(ctxt.getState().waitingCall());
                     break;
                 case 6:
-                    System.out.println(contextPhone.getState().returnToCall());
+                    System.out.println(ctxt.getState().returnToCall());
                     break;
                 default:
                     System.out.println("Insira um novo valor");
@@ -52,7 +50,5 @@ public class Menu {
               "5 ->  Colocar chamada em espera\n" +
               "6 ->  Retornar para chamada\n\n\n" +
               "0 ->  Encerrar aplicação";
-    };
-
-
+    }
 }

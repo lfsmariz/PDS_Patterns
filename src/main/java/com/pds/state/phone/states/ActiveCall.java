@@ -6,7 +6,7 @@ import lombok.AllArgsConstructor;
 
 @AllArgsConstructor
 public class ActiveCall implements StateCall {
-    private ContextPhone contextPhone;
+    private final ContextPhone contextPhone;
 
     @Override
     public String cancelCall() {
