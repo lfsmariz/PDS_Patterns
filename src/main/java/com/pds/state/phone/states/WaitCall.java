@@ -2,13 +2,11 @@ package com.pds.state.phone.states;
 
 import com.pds.state.phone.ContextPhone;
 import com.pds.state.phone.MessagePhone;
-import com.pds.state.phone.states.ActiveCall;
-import com.pds.state.phone.states.StateCall;
 import lombok.AllArgsConstructor;
 
 @AllArgsConstructor
 public class WaitCall implements StateCall {
-    ContextPhone contextPhone;
+    private final ContextPhone contextPhone;
 
     @Override
     public String cancelCall() {
